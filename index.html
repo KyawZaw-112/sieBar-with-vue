@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Counter</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div id="app">
+			<div id="hamburger">
+				<p
+					@click="toggleHandler"
+					:style="{'display' : hanburgerDisplay}"
+				>
+					&#9776;
+				</p>
+				<!-- Hamburger Icon -->
+			</div>
+
+			<div id="sidebar" :style="{ 'left': LeftPositon + `px`}">
+				<div class="close-btn" @click="closeHandler">&times;</div>
+				<h1 :style="{'color' : titleColor }">{{title}}</h1>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
